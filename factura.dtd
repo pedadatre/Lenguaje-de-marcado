@@ -1,0 +1,27 @@
+        <!ELEMENT facturacio (empresa, factura*)>
+        <!ELEMENT empresa (raosocial)>
+        <!ELEMENT raosocial (nom,cognom?,adreca,codipostal,poblacio,(DNI|NIF))>
+        <!ATTLIST rasocial tipus CDATA #REQUIRED>
+        <!ELEMENT nom (#PCDATA)>
+        <!ELEMENT cognom (#PCDATA)>
+        <!ELEMENT adreca (#PCDATA)>
+        <!ELEMENT codipostal (#PCDATA)>
+        <!ELEMENT poblacio (#PCDATA)>
+        <!ELEMENT DNI (#PCDATA)>
+        <!ELEMENT NIF (#PCDATA)>
+        <!ELEMENT factura (client,rebut*,data,subtotal,iva,total)>
+        <!ATTLIST factura numero ID #REQUIRED>
+        <!ELEMENT client (raosocial)>
+        <!ELEMENT rebut (data,totalrebut,linies)>
+        <!ATTLIST rebut numero ID #REQUIRED>
+        <!ELEMENT data (#PCDATA)>
+        <!ELEMENT totalrebut (#PCDATA)>
+        <!ELEMENT linies (producte)*>
+        <!ELEMENT producte (descripcio,quantitat,preuunitari)>
+        <!ATTLIST producte codi ID #REQUIRED>
+        <!ELEMENT descripcio (#PCDATA)>
+        <!ELEMENT quantitat (#PCDATA)>
+        <!ELEMENT preuunitari (#PCDATA)>
+        <!ELEMENT subtotal (#PCDATA)>
+        <!ELEMENT iva (#PCDATA)>
+        <!ELEMENT total (#PCDATA)>
